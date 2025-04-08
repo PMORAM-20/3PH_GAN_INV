@@ -2,18 +2,41 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "cla_ex1_asin_cpu1",
+            "name": "3PH_GAN_INV_SW_CPU1",
             "type": "ccs-debug",
             "request": "launch",
             "projectInfo": {
-                "name": "cla_ex1_asin_cpu1",
-                "resourceId": "/cla_ex1_asin_cpu1"
+                "name": "3PH_GAN_INV_SW_CPU1",
+                "resourceId": "/3PH_GAN_INV_SW_CPU1"
             },
             "launchSettings": {
                 "coresToLoadForProjectLaunch": [
                     "C28xx_CPU1",
                     "C28xx_CPU2"
                 ]
+            },
+            "debuggerSettings": {
+                "targetConfigs/TMS320F28377D.ccxml": {
+                    "Texas Instruments XDS100v2 USB Debug Probe_0/C28xx_CPU1": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
+            }
+        },
+        {
+            "name": "3PH_GAN_INV_SW_CPU2",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "3PH_GAN_INV_SW_CPU2",
+                "resourceId": "/3PH_GAN_INV_SW_CPU2"
+            },
+            "debuggerSettings": {
+                "targetConfigs/TMS320F28377D.ccxml": {
+                    "Texas Instruments XDS100v2 USB Debug Probe_0/C28xx_CPU1": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                    }
+                }
             }
         }
     ]
