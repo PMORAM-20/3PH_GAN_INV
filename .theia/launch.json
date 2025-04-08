@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "cla_ex1_asin_cpu1",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "cla_ex1_asin_cpu1",
+                "resourceId": "/cla_ex1_asin_cpu1"
+            },
+            "launchSettings": {
+                "coresToLoadForProjectLaunch": [
+                    "C28xx_CPU1",
+                    "C28xx_CPU2"
+                ]
+            }
+        }
+    ]
+}
