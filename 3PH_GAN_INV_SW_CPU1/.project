@@ -19,9 +19,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>driverlib.lib</name>
+			<name>drivers/driverlib.lib</name>
 			<type>1</type>
-			<locationURI>COM_TI_C2000WARE_INSTALL_DIR/driverlib/f2837xd/driverlib/ccs/Debug/driverlib.lib</locationURI>
+			<location>C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib/ccs/Release/driverlib.lib</location>
 		</link>
 	</linkedResources>
 	<variableList>

@@ -12,6 +12,6 @@
    {
       "directory" : "C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/CPU1_RAM",
       "command"   : "clang++ -I\"C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1\" -I\"C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/device\" -I\"/driverlib/f2837xd/driverlib\" -I\"C:/ti/ccs2011/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include\" -I\"/libraries/math/IQmath/c28/include\" -DCPU1 -DCLA1 -xc",
-      "file"      : "C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/main/main.c"
+      "file"      : "C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/Control Strategies/Model Predictive Control/main.c"
    }
 ]
