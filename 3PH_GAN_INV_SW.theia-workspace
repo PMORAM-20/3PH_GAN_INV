@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "path": "3PH_GAN_INV_SW_CPU1"
+    },
+    {
+      "path": "3PH_GAN_INV_SW_CPU2"
+    }
+  ],
+  "settings": {},
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "9PH_TEST_BENCH_C28xx",
+        "type": "ccs-debug",
+        "request": "launch",
+        "projectInfo": {
+          "name": "9PH_TEST_BENCH_C28xx",
+          "resourceId": "/9PH_TEST_BENCH_C28xx"
+        }
+      }
+    ]
+  }
+}
