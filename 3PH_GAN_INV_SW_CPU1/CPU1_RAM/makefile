@@ -166,7 +166,6 @@ clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
 	-$(RM) "Control Strategies\Model Predictive Control\main.obj" "device\F2837xD_CodeStartBranch.obj" "device\device.obj" "src\common\data_types.obj" "src\common\math_utils.obj" "src\control\foc_control.obj" "src\peripherals\adc_driver.obj" "src\peripherals\cla_driver.obj" "src\peripherals\cmpss_driver.obj" "src\peripherals\peripheral_setup.obj" "src\peripherals\pwm_driver.obj" 
 	-$(RM) "Control Strategies\Model Predictive Control\main.d" "device\device.d" "src\common\data_types.d" "src\common\math_utils.d" "src\control\foc_control.d" "src\peripherals\adc_driver.d" "src\peripherals\cla_driver.d" "src\peripherals\cmpss_driver.d" "src\peripherals\peripheral_setup.d" "src\peripherals\pwm_driver.d" 
-	-$(RM) "Control Strategies\Model Predictive Control\main.d" 
 	-$(RM) "device\F2837xD_CodeStartBranch.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

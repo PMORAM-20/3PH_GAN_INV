@@ -95,7 +95,7 @@
                         </toolChain>
                     </folderInfo>
                     <sourceEntries>
-                        <entry excluding="map/2837xD_RAM_lnk_cpu1.cmd|map/2837xD_FLASH_lnk_cpu1.cmd|oldReleases|oldReleases/cla_ex1_asin_cpu1.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="Control Strategies/Model Predictive Control/main.cla|map/2837xD_RAM_lnk_cpu1.cmd|map/2837xD_FLASH_lnk_cpu1.cmd|oldReleases|oldReleases/cla_ex1_asin_cpu1.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                     </sourceEntries>
                 </configuration>
             </storageModule>

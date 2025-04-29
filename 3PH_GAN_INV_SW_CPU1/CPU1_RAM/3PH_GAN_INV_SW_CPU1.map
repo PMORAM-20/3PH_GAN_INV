@@ -1,7 +1,7 @@
 ******************************************************************************
              TMS320C2000 Linker PC v22.6.1                     
 ******************************************************************************
->> Linked Tue Apr 29 19:10:13 2025
+>> Linked Tue Apr 29 20:31:28 2025
 
 OUTPUT FILE NAME:   <3PH_GAN_INV_SW_CPU1.out>
 ENTRY POINT SYMBOL: "code_start"  address: 00000000
@@ -15,7 +15,7 @@ PAGE 0:
   BEGIN                 00000000   00000002  00000002  00000000  RWIX
   RAMM0                 00000123   000002dd  00000010  000002cd  RWIX
   RAMLS4_5              0000a000   00001000  00000000  00001000  RWIX
-  RAMD0                 0000b000   00000800  000000d7  00000729  RWIX
+  RAMD0                 0000b000   00000800  000000d9  00000727  RWIX
   RAMD1                 0000b800   00000800  00000000  00000800  RWIX
   RAMGS5                00011000   00001000  00000000  00001000  RWIX
   RESET                 003fffc0   00000002  00000000  00000002  RWIX
@@ -84,7 +84,7 @@ CLAscratch
 *          1    00008800    00000100     UNINITIALIZED
                   00008800    00000100     --HOLE--
 
-.text      0    0000b000    000000d7     
+.text      0    0000b000    000000d9     
                   0000b000    00000030     rts2800_fpu32_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
                   0000b030    0000002b                            : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
                   0000b05b    00000029                            : exit.c.obj (.text)
@@ -93,14 +93,20 @@ CLAscratch
                   0000b0b7    0000000c                            : args_main.c.obj (.text)
                   0000b0c3    00000008     F2837xD_CodeStartBranch.obj (.text)
                   0000b0cb    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
-                  0000b0d3    00000002                            : pre_init.c.obj (.text)
-                  0000b0d5    00000001                            : _lock.c.obj (.text)
-                  0000b0d6    00000001                            : startup.c.obj (.text)
+                  0000b0d3    00000002     main.obj (.text)
+                  0000b0d5    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
+                  0000b0d7    00000001                            : _lock.c.obj (.text)
+                  0000b0d8    00000001                            : startup.c.obj (.text)
 
 MODULE SUMMARY
 
        Module                        code   ro data   rw data
        ------                        ----   -------   -------
+    .\Control Strategies\Model Predictive Control\
+       main.obj                      2      0         0      
+    +--+-----------------------------+------+---------+---------+
+       Total:                        2      0         0      
+                                                             
     .\device\
        F2837xD_CodeStartBranch.obj   10     0         0      
     +--+-----------------------------+------+---------+---------+
@@ -123,7 +129,7 @@ MODULE SUMMARY
        Stack:                        0      0         256    
        Linker Generated:             0      16        0      
     +--+-----------------------------+------+---------+---------+
-       Grand Total:                  217    16        264    
+       Grand Total:                  219    16        264    
 
 
 LINKER GENERATED COPY TABLES
@@ -178,13 +184,13 @@ n/a   UNDEFED   __c_args__
 0     0000b0b7  _args_main                     
 0     0000b0a0  _c_int00                       
 1     00009806  _lock                          
-0     0000b0d5  _nop                           
-0     0000b0d6  _system_post_cinit             
-0     0000b0d3  _system_pre_init               
+0     0000b0d7  _nop                           
+0     0000b0d8  _system_post_cinit             
+0     0000b0d5  _system_pre_init               
 0     0000b05b  abort                          
 0     00000000  code_start                     
 0     0000b05d  exit                           
-n/a   UNDEFED   main                           
+0     0000b0d3  main                           
 0     0000b084  memcpy                         
 
 
@@ -207,9 +213,10 @@ page  address   name
 0     0000b0a0  _c_int00                       
 0     0000b0b7  _args_main                     
 0     0000b0cb  __TI_decompress_none           
-0     0000b0d3  _system_pre_init               
-0     0000b0d5  _nop                           
-0     0000b0d6  _system_post_cinit             
+0     0000b0d3  main                           
+0     0000b0d5  _system_pre_init               
+0     0000b0d7  _nop                           
+0     0000b0d8  _system_post_cinit             
 1     00000400  __stack                        
 1     00000500  __TI_STACK_END                 
 1     00009800  __TI_enable_exit_profile_output
@@ -222,6 +229,5 @@ abs   ffffffff  __TI_pprof_out_hndl
 abs   ffffffff  __TI_prof_data_size            
 abs   ffffffff  __TI_prof_data_start           
 n/a   UNDEFED   __c_args__                     
-n/a   UNDEFED   main                           
 
 [31 symbols]

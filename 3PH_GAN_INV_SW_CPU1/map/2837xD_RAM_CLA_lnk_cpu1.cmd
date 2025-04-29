@@ -92,6 +92,7 @@ SECTIONS
    .const           : > RAMLS3,    PAGE = 1
    .data            : > RAMLS3,    PAGE = 1
    .sysmem          : > RAMLS3,    PAGE = 1
+   DATA_LOG_SECTION : > RAMGS0
 #else
    .pinit           : > RAMM0,     PAGE = 0
    .ebss            : > RAMLS2,    PAGE = 1
