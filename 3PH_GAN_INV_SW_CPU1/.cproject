@@ -46,11 +46,16 @@
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.DIAG_WRAP.57706462" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.DIAG_WRAP.off" valueType="enumerated"/>
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.INCLUDE_PATH.410670906" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.INCLUDE_PATH" valueType="includePath">
                                     <listOptionValue value="${COM_TI_C2000WARE_INCLUDE_PATH}"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/include"/>
                                     <listOptionValue value="${PROJECT_ROOT}"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/drivers"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/map"/>
                                     <listOptionValue value="${PROJECT_ROOT}/device"/>
+                                    <listOptionValue value="C:\ti\c2000\C2000Ware_5_04_00_00\driverlib\f2837xd\driverlib"/>
                                     <listOptionValue value="${C2000WARE_DLIB_ROOT}"/>
                                     <listOptionValue value="${CG_TOOL_ROOT}/include"/>
                                     <listOptionValue value="${COM_TI_C2000WARE_INSTALL_DIR}\libraries\math\IQmath\c28\include"/>
+                                    <listOptionValue value="C:\ti\c2000\C2000Ware_5_04_00_00\libraries\math\IQmath\c28\include"/>
                                 </option>
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.ABI.390514959" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.ABI" value="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.ABI.eabi" valueType="enumerated"/>
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.DEFINE.160301927" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.DEFINE" valueType="definedSymbols">
@@ -82,12 +87,15 @@
                                     <listOptionValue value="libc.a"/>
                                 </option>
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_22.6.linkerID.ENTRY_POINT.1155903371" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.linkerID.ENTRY_POINT" value="code_start" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_22.6.linkerID.DEFINE.910163044" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.linkerID.DEFINE" valueType="definedSymbols">
+                                    <listOptionValue value="CLA_C"/>
+                                </option>
                             </tool>
                             <tool id="com.ti.ccstudio.buildDefinitions.C2000_22.6.hex.1816395524" name="C2000 Hex Utility" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.hex"/>
                         </toolChain>
                     </folderInfo>
                     <sourceEntries>
-                        <entry excluding="oldReleases|oldReleases/cla_ex1_asin_cpu1.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="map/2837xD_RAM_lnk_cpu1.cmd|map/2837xD_FLASH_lnk_cpu1.cmd|oldReleases|oldReleases/cla_ex1_asin_cpu1.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                     </sourceEntries>
                 </configuration>
             </storageModule>

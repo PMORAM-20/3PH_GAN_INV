@@ -18,7 +18,7 @@
  *          like ADC_SAMPLING_FREQ.
  */
 
-#include "drivers/ADC_driver.h"
+#include "peripherals/adc_driver.h"
 
 /**
  * @brief Array holding configurations for all ADC modules.
@@ -29,7 +29,7 @@
  *          trigger source for synchronized sampling.
  */
 ADCConfig adc_configs[NUM_ADC_MODULES] = {
-    {ADC_A_BASE, ADC_RESOLUTION_12BIT, ADC_SIGNAL_MODE_SINGLE_ENDED, ADC_TRIGGER_EPWM1_SOCA, 0x0007} // Channels 0, 1, 2
+    {ADCA_BASE, ADC_RESOLUTION_12BIT, ADC_MODE_SINGLE_ENDED, ADC_TRIGGER_EPWM1_SOCA, 0x0007} // Channels 0, 1, 2
 };
 
 /**
@@ -41,7 +41,8 @@ ADCConfig adc_configs[NUM_ADC_MODULES] = {
  *          Configures interrupt pulse mode for end-of-conversion signaling.
  */
 void ADC_init(void) {
-    for (int i = 0; i < NUM_ADC_MODULES; i++) {
+    int i = 0;
+    for (i = 0; i < NUM_ADC_MODULES; i++) {
         // Enable ADC clock
         EALLOW;
         SysCtl_enablePeripheral((SysCtl_PeripheralPCLOCKCR)(SYSCTL_PERIPH_CLK_ADCA + i));

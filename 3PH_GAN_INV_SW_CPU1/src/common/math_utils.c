@@ -24,8 +24,9 @@ static float sincos_table[SINCOS_TABLE_SIZE][2]; /* [sin, cos] */
 
 void math_utils_init(void)
 {
+    uint32_t i = 0;
     /* Initialize sine/cosine lookup table (optional) */
-    for (uint32_t i = 0; i < SINCOS_TABLE_SIZE; i++) {
+    for (i = 0; i < SINCOS_TABLE_SIZE; i++) {
         float angle = (2.0f * MATH_PI * i) / SINCOS_TABLE_SIZE;
         sincos_table[i][0] = sinf(angle); /* sine */
         sincos_table[i][1] = cosf(angle); /* cosine */

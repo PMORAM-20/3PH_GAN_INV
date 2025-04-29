@@ -17,8 +17,8 @@
  * @license MIT License (see LICENSE file in project root)
  */
 
-#ifndef INCLUDE_CONTROL_FOC_TYPES_H_
-#define INCLUDE_CONTROL_FOC_TYPES_H_
+#ifndef INCLUDE_CONTROL_FOC_CONTROL_H_
+#define INCLUDE_CONTROL_FOC_CONTROL_H_
 
 #include <stdint.h>
 #include "common/data_types.h"
@@ -73,4 +73,4 @@ extern float g_max_phase_voltage;
  */
 void foc_types_init(void);
 
-#endif /* INCLUDE_CONTROL_FOC_TYPES_H_ */
+#endif /* INCLUDE_CONTROL_FOC_CONTROL_H_ */

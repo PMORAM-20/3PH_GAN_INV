@@ -117,6 +117,11 @@
  */
 #define DAT_LOG_BUFFER_LENGTH 2000U
 
+/**
+ * @brief Number of profiling points (-).
+ */
+#define NUM_PROFILING_POINTS 6U
+
 #if DATA_LOG_SEL == DATALOG_DEFAULT
     /**
      * @brief Number of logged variables (default mode).

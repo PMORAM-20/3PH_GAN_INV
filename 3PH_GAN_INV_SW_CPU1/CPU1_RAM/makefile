@@ -4,17 +4,25 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccs2011/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS
+CG_TOOL_ROOT := C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"./Control Strategies/Model Predictive Control/main.obj" \
 "./device/F2837xD_CodeStartBranch.obj" \
 "./device/device.obj" \
-"./main/main.obj" \
-"../2837xD_RAM_lnk_cpu1.cmd" \
-"C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib/ccs/Debug/driverlib.lib" \
+"./src/common/data_types.obj" \
+"./src/common/math_utils.obj" \
+"./src/control/foc_control.obj" \
+"./src/peripherals/adc_driver.obj" \
+"./src/peripherals/cla_driver.obj" \
+"./src/peripherals/cmpss_driver.obj" \
+"./src/peripherals/peripheral_setup.obj" \
+"./src/peripherals/pwm_driver.obj" \
+"C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib/ccs/Release/driverlib.lib" \
+"../map/2837xD_RAM_CLA_lnk_cpu1.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
 
@@ -25,12 +33,20 @@ RMDIR := RMDIR /S/Q
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include subdir_vars.mk
+-include Control\ Strategies/Model\ Predictive\ Control/subdir_vars.mk
 -include device/subdir_vars.mk
--include main/subdir_vars.mk
--include subdir_rules.mk
+-include drivers/subdir_vars.mk
+-include map/subdir_vars.mk
+-include src/common/subdir_vars.mk
+-include src/control/subdir_vars.mk
+-include src/peripherals/subdir_vars.mk
+-include Control\ Strategies/Model\ Predictive\ Control/subdir_rules.mk
 -include device/subdir_rules.mk
--include main/subdir_rules.mk
+-include drivers/subdir_rules.mk
+-include map/subdir_rules.mk
+-include src/common/subdir_rules.mk
+-include src/control/subdir_rules.mk
+-include src/peripherals/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -141,15 +157,16 @@ all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 3PH_GAN_INV_SW_CPU1.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccs2011/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=5 --fp_mode=relaxed --define=CPU1 --define=CLA1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"3PH_GAN_INV_SW_CPU1.map" --stack_size=0x100 --warn_sections -i"C:/ti/ccs2011/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/lib" -i"C:/ti/ccs2011/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="3PH_GAN_INV_SW_CPU1_linkInfo.xml" --entry_point=code_start --rom_model -o "3PH_GAN_INV_SW_CPU1.out" $(ORDERED_OBJS)
+	"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=5 --fp_mode=relaxed --define=CPU1 --define=CLA1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"3PH_GAN_INV_SW_CPU1.map" --stack_size=0x100 --warn_sections -i"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/lib" -i"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include" --reread_libs --define=CLA_C --diag_wrap=off --display_error_number --xml_link_info="3PH_GAN_INV_SW_CPU1_linkInfo.xml" --entry_point=code_start --rom_model -o "3PH_GAN_INV_SW_CPU1.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "device\F2837xD_CodeStartBranch.obj" "device\device.obj" "main\main.obj" 
-	-$(RM) "device\device.d" "main\main.d" 
+	-$(RM) "Control Strategies\Model Predictive Control\main.obj" "device\F2837xD_CodeStartBranch.obj" "device\device.obj" "src\common\data_types.obj" "src\common\math_utils.obj" "src\control\foc_control.obj" "src\peripherals\adc_driver.obj" "src\peripherals\cla_driver.obj" "src\peripherals\cmpss_driver.obj" "src\peripherals\peripheral_setup.obj" "src\peripherals\pwm_driver.obj" 
+	-$(RM) "Control Strategies\Model Predictive Control\main.d" "device\device.d" "src\common\data_types.d" "src\common\math_utils.d" "src\control\foc_control.d" "src\peripherals\adc_driver.d" "src\peripherals\cla_driver.d" "src\peripherals\cmpss_driver.d" "src\peripherals\peripheral_setup.d" "src\peripherals\pwm_driver.d" 
+	-$(RM) "Control Strategies\Model Predictive Control\main.d" 
 	-$(RM) "device\F2837xD_CodeStartBranch.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

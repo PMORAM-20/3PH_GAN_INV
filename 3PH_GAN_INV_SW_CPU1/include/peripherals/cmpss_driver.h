@@ -45,6 +45,11 @@ typedef struct {
 #define NUM_CMPSS_MODULES 1     // One CMPSS module for protection
 
 /**
+ * @brief Voltage logic level of the DSP F28379D
+ */
+#define VREF 3.3f
+
+/**
  * @brief Array holding configurations for all CMPSS modules.
  */
 extern CMPSSConfig cmpss_configs[NUM_CMPSS_MODULES];

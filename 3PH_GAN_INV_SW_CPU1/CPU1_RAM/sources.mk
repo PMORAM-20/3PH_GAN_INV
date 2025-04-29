@@ -111,7 +111,11 @@ PDE_DEPS__QUOTED :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-. \
+Control\ Strategies/Model\ Predictive\ Control \
 device \
-main \
+drivers \
+map \
+src/common \
+src/control \
+src/peripherals \
 

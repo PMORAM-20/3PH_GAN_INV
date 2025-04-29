@@ -16,23 +16,23 @@
 
 /** @brief Global interrupt status, stored in fast RAM */
 #pragma DATA_SECTION(g_interrupt_status, ".ebss")
-static volatile InterruptStatus g_interrupt_status = {0, 0, 0, 0, 0, 0, false};
+volatile InterruptStatus g_interrupt_status = {0, 0, 0, 0, 0, 0, false};
 
 /** @brief Global rotor data, stored in fast RAM */
 #pragma DATA_SECTION(g_rotor, ".ebss")
-static volatile RotorData g_rotor = {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
+volatile RotorData g_rotor = {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
 
 /** @brief Global PWM period control, stored in fast RAM */
 #pragma DATA_SECTION(g_pwm_period_ctrl, ".ebss")
-static volatile uint32_t g_pwm_period_ctrl = 0;
+volatile uint32_t g_pwm_period_ctrl = 0;
 
 /** @brief Global ADC results, stored in fast RAM */
 #pragma DATA_SECTION(g_adc_result, ".ebss")
-static volatile AdcResult g_adc_result = {0, 0, 0};
+volatile AdcResult g_adc_result = {0, 0, 0};
 
 /** @brief Global experimental settings, stored in general RAM */
 #pragma DATA_SECTION(g_experiment, "DATA_LOG_SECTION")
-static ExperimentSettings g_experiment = {
+ExperimentSettings g_experiment = {
     0.0f, PWM_FREQUENCY_HZ, LOAD_TORQUE, CONTROL_FREQUENCY_HZ, TARGET_SPEED,
     DAT_LOG_BUFFER_LENGTH, LOGGED_VARIABLES, DECIMATION_FACTOR, 0.0f, 0.0f,
     "", {{0.0f}}
@@ -40,59 +40,59 @@ static ExperimentSettings g_experiment = {
 
 /** @brief Global main clock, stored in fast RAM */
 #pragma DATA_SECTION(g_main_clock, ".ebss")
-static volatile Time g_main_clock = {0, 0};
+volatile Time g_main_clock = {0, 0};
 
 #if SPEED_PROFILE == TRAPEZOIDAL
 /** @brief Global trapezoidal speed profile, stored in fast RAM */
 #pragma DATA_SECTION(g_speed_profile, ".ebss")
-static TrapezoidalData g_speed_profile = {{0, 0}, {0, 0}, {0, 0}, 0.0f};
+TrapezoidalData g_speed_profile = {{0, 0}, {0, 0}, {0, 0}, 0.0f};
 #endif
 
 #if CONTROL_MODE == SPEED_CTRL
 /** @brief Global speed controller, stored in fast RAM */
 #pragma DATA_SECTION(g_speed_controller, ".ebss")
-static PiController g_speed_controller = {KP_SPEED, KI_SPEED, 0.0f, 0.0f, 0.0f, 0.0f};
+PiController g_speed_controller = {KP_SPEED, KI_SPEED, 0.0f, 0.0f, 0.0f, 0.0f};
 #elif CONTROL_MODE == POS_CTRL
 /** @brief Global angle controller, stored in fast RAM */
 #pragma DATA_SECTION(g_angle_controller, ".ebss")
-static PiController g_angle_controller = {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
+PiController g_angle_controller = {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
 #elif CONTROL_MODE == TORQUE_CTRL
 /** @brief Global torque controller, stored in fast RAM */
 #pragma DATA_SECTION(g_torque_controller, ".ebss")
-static PiController g_torque_controller = {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
+PiController g_torque_controller = {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
 #endif
 
 /** @brief Global integration gain, stored in fast RAM */
 #pragma DATA_SECTION(g_integration_gain, ".ebss")
-static float g_integration_gain = 0.0f;
+float g_integration_gain = 0.0f;
 
 /** @brief Global reference currents in d-q frame, stored in fast RAM */
 #pragma DATA_SECTION(g_dq_curr_ref, ".ebss")
-static ParkData g_dq_curr_ref = {0.0f, 0.0f, 0.0f};
+ParkData g_dq_curr_ref = {0.0f, 0.0f, 0.0f};
 
 /** @brief Global saturated currents in d-q frame, stored in fast RAM */
 #pragma DATA_SECTION(g_dq_curr_sat, ".ebss")
-static ParkData g_dq_curr_sat = {0.0f, 0.0f, 0.0f};
+ParkData g_dq_curr_sat = {0.0f, 0.0f, 0.0f};
 
 /** @brief Global measured phase currents, stored in fast RAM */
 #pragma DATA_SECTION(g_phase_curr_meas, ".ebss")
-static PhaseData g_phase_curr_meas = {0.0f, 0.0f, 0.0f};
+PhaseData g_phase_curr_meas = {0.0f, 0.0f, 0.0f};
 
 /** @brief Global measured currents in alpha-beta frame, stored in fast RAM */
 #pragma DATA_SECTION(g_ab_curr_meas, ".ebss")
-static ClarkeData g_ab_curr_meas = {0.0f, 0.0f, 0.0f};
+ClarkeData g_ab_curr_meas = {0.0f, 0.0f, 0.0f};
 
 /** @brief Global reference currents in alpha-beta frame, stored in fast RAM */
 #pragma DATA_SECTION(g_ab_curr_ref, ".ebss")
-static ClarkeData g_ab_curr_ref = {0.0f, 0.0f, 0.0f};
+ClarkeData g_ab_curr_ref = {0.0f, 0.0f, 0.0f};
 
 /** @brief Global measured currents in d-q frame, stored in fast RAM */
 #pragma DATA_SECTION(g_dq_curr_meas, ".ebss")
-static ParkData g_dq_curr_meas = {0.0f, 0.0f, 0.0f};
+ParkData g_dq_curr_meas = {0.0f, 0.0f, 0.0f};
 
 /** @brief Global profiling data, stored in fast RAM */
 #pragma DATA_SECTION(g_profiling, ".ebss")
-static DelayMeasurement g_profiling[NUM_PROFILING_POINTS] = {{0.0f, 0.0f, 0.0f}};
+DelayMeasurement g_profiling[NUM_PROFILING_POINTS] = {{0.0f, 0.0f, 0.0f}};
 
 /* Function Implementations */
 
@@ -137,11 +137,6 @@ void data_types_init(void) {
     g_experiment.start_time = 0.0f;
     g_experiment.end_angle = 0.0f;
     strncpy(g_experiment.control_strategy, "FOC", CONTROL_STR_MAX_LEN);
-    for (uint32_t i = 0; i < DAT_LOG_BUFFER_LENGTH; i++) {
-        for (uint32_t j = 0; j < LOGGED_VARIABLES; j++) {
-            g_experiment.data_log[i][j] = 0.0f;
-        }
-    }
 
     // Initialize main clock
     g_main_clock.seconds = 0;
@@ -203,7 +198,8 @@ void data_types_init(void) {
     g_dq_curr_meas.zero = 0.0f;
 
     // Initialize profiling
-    for (uint32_t i = 0; i < NUM_PROFILING_POINTS; i++) {
+    uint32_t i = 0;
+    for (i = 0; i < NUM_PROFILING_POINTS; i++) {
         g_profiling[i].start = 0.0f;
         g_profiling[i].end = 0.0f;
         g_profiling[i].elapsed = 0.0f;

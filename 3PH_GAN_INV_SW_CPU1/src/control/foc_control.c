@@ -8,41 +8,41 @@
  * @version 1.0.0
  */
 
-#include "control/foc_types.h"
+#include "control/foc_control.h"
 
 /* Global Variable Definitions */
 
 /** @brief Global d-axis current controller, stored in fast RAM */
 #pragma DATA_SECTION(g_d_current_controller, ".ebss")
-static PiController g_d_current_controller = {KP_ID, KI_ID, 0.0f, 0.0f, 0.0f, 0.0f};
+PiController g_d_current_controller = {KP_ID, KI_ID, 0.0f, 0.0f, 0.0f, 0.0f};
 
 /** @brief Global q-axis current controller, stored in fast RAM */
 #pragma DATA_SECTION(g_q_current_controller, ".ebss")
-static PiController g_q_current_controller = {KP_IQ, KI_IQ, 0.0f, 0.0f, 0.0f, 0.0f};
+PiController g_q_current_controller = {KP_IQ, KI_IQ, 0.0f, 0.0f, 0.0f, 0.0f};
 
 /** @brief Global reference voltages in d-q frame, stored in fast RAM */
 #pragma DATA_SECTION(g_dqxy_volt_ref, ".ebss")
-static ParkData g_dqxy_volt_ref = {0.0f, 0.0f, 0.0f};
+ParkData g_dqxy_volt_ref = {0.0f, 0.0f, 0.0f};
 
 /** @brief Global per-unit phase voltages, stored in fast RAM */
 #pragma DATA_SECTION(g_phase_volt_pu, ".ebss")
-static PhaseData g_phase_volt_pu = {0.0f, 0.0f, 0.0f};
+PhaseData g_phase_volt_pu = {0.0f, 0.0f, 0.0f};
 
 /** @brief Global saturated voltages in d-q frame, stored in fast RAM */
 #pragma DATA_SECTION(g_dqxy_volt_sat, ".ebss")
-static ParkData g_dqxy_volt_sat = {0.0f, 0.0f, 0.0f};
+ParkData g_dqxy_volt_sat = {0.0f, 0.0f, 0.0f};
 
 /** @brief Global reference voltages in alpha-beta frame, stored in fast RAM */
 #pragma DATA_SECTION(g_abxy_volt_ref, ".ebss")
-static ClarkeData g_abxy_volt_ref = {0.0f, 0.0f, 0.0f};
+ClarkeData g_abxy_volt_ref = {0.0f, 0.0f, 0.0f};
 
 /** @brief Global reference phase voltages, stored in fast RAM */
 #pragma DATA_SECTION(g_phase_volt_ref, ".ebss")
-static PhaseData g_phase_volt_ref = {0.0f, 0.0f, 0.0f};
+PhaseData g_phase_volt_ref = {0.0f, 0.0f, 0.0f};
 
 /** @brief Global maximum phase voltage, stored in fast RAM */
 #pragma DATA_SECTION(g_max_phase_voltage, ".ebss")
-static float g_max_phase_voltage = 0.0f;
+float g_max_phase_voltage = 0.0f;
 
 /* Function Implementations */
 

@@ -25,10 +25,10 @@
 #define INCLUDE_DRIVERS_PERIPHERALSETUP_H_
 
 /* Driver Includes */
-#include "drivers/PWM_driver.h"
-#include "drivers/ADC_driver.h"
-#include "drivers/CMPSS_driver.h"
-#include "drivers/CLA_driver.h"
+#include "peripherals/PWM_driver.h"
+#include "peripherals/ADC_driver.h"
+#include "peripherals/CMPSS_driver.h"
+#include "peripherals/CLA_driver.h"
 
 /**
  * @brief Initializes all peripherals for the three-phase inverter system.

@@ -1,17 +1,17 @@
 [
    {
-      "directory" : "C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/CPU2_RAM",
-      "command"   : "clang++ -I\"C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2\" -I\"C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/device\" -I\"C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib\" -I\"C:/ti/ccs2011/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include\" -I\"C:/ti/c2000/C2000Ware_5_04_00_00/libraries/math/IQmath/c28/include\" -DCPU2",
-      "file"      : "C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/device/F2837xD_CodeStartBranch.asm"
+      "directory" : "C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/CPU2_RAM",
+      "command"   : "clang++ -I\"C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2\" -I\"C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/device\" -I\"C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include\" -I\"C:/ti/c2000/C2000Ware_5_04_00_00/libraries/math/IQmath/c28/include\" -DCPU2",
+      "file"      : "C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/device/F2837xD_CodeStartBranch.asm"
    },
    {
-      "directory" : "C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/CPU2_RAM",
-      "command"   : "clang++ -I\"C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2\" -I\"C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/device\" -I\"C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib\" -I\"C:/ti/ccs2011/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include\" -I\"C:/ti/c2000/C2000Ware_5_04_00_00/libraries/math/IQmath/c28/include\" -DCPU2 -xc",
-      "file"      : "C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/device/device.c"
+      "directory" : "C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/CPU2_RAM",
+      "command"   : "clang++ -I\"C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2\" -I\"C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/device\" -I\"C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include\" -I\"C:/ti/c2000/C2000Ware_5_04_00_00/libraries/math/IQmath/c28/include\" -DCPU2 -xc",
+      "file"      : "C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/device/device.c"
    },
    {
-      "directory" : "C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/CPU2_RAM",
-      "command"   : "clang++ -I\"C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2\" -I\"C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/device\" -I\"C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib\" -I\"C:/ti/ccs2011/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include\" -I\"C:/ti/c2000/C2000Ware_5_04_00_00/libraries/math/IQmath/c28/include\" -DCPU2 -xc",
-      "file"      : "C:/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/main/main.c"
+      "directory" : "C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/CPU2_RAM",
+      "command"   : "clang++ -I\"C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2\" -I\"C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/device\" -I\"C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include\" -I\"C:/ti/c2000/C2000Ware_5_04_00_00/libraries/math/IQmath/c28/include\" -DCPU2 -xc",
+      "file"      : "C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU2/main/main.c"
    }
 ]

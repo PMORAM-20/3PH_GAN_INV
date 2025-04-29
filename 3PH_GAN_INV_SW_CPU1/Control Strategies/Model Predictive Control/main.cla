@@ -1,0 +1,79 @@
+/*
+ * CLA_tasks.cla
+ *
+ * @file    CLA_tasks.cla
+ * @brief   CLA tasks for FCS-MPC of a three-phase machine.
+ * @author  Pablo Mora Moreno
+ * @date    April 29, 2025
+ * @version 1.0.1
+ *
+ * @details Implements CLA tasks for current measurement processing and cost
+ *          function evaluation for FCS-MPC. Task 1 processes ADC data, Task 2
+ *          evaluates cost function for states 4-7, and Task 8 is reserved.
+ */
+
+#include "common/data_types.h"
+#include "common/math_utils.h"
+
+// External variables
+extern PhaseData PhaseCurrMeas;
+extern ClarkeData abxyCurrkp1;
+extern ClarkeData abxyCurrRef;
+extern ClarkeData gamma_V[8];
+extern volatile CostFunOpt ClaToCpuCostFunOpt;
+extern float Rs;
+extern float Ls;
+extern float Ts;
+
+// CLA flags
+volatile uint16_t CLA1_flag1 __attribute__((aligned(2))) = 0;
+volatile uint16_t CLA1_flag2 __attribute__((aligned(2))) = 0;
+volatile uint16_t CLA1_flag3 __attribute__((aligned(2))) = 0;
+
+// Task 1: Process ADC data
+#pragma CODE_SECTION(Cla1Prog)
+__interrupt void Cla1Task1(void)
+{
+    // Read ADC data (assumed populated by adc_driver.c)
+    // Example: PhaseCurrMeas.Ia, Ib, Ic updated by ADC interrupt
+    CLA1_flag1 = 1; // Signal completion
+}
+
+// Task 2: Evaluate cost function for states 4-7
+#pragma CODE_SECTION(Cla1Prog)
+__interrupt void Cla1Task2(void)
+{
+    int k = 0;
+    ClarkeData abxyCurrkp2;
+    ClarkeData abxyerror;
+    float Cf;
+
+    ClaToCpuCostFunOpt.J_opt = 999999999.0f;
+
+    for (int k = 4; k < 8; k++) {
+        // Predict currents (k+2)
+        abxyCurrkp2.alpha = abxyCurrkp1.alpha + (Ts / Ls) * (gamma_V[k].alpha * DC_BUS_VOLTAGE - Rs * abxyCurrkp1.alpha);
+        abxyCurrkp2.beta = abxyCurrkp1.beta + (Ts / Ls) * (gamma_V[k].beta * DC_BUS_VOLTAGE - Rs * abxyCurrkp1.beta);
+
+        // Compute error
+        abxyerror.alpha = abxyCurrRef.alpha - abxyCurrkp2.alpha;
+        abxyerror.beta = abxyCurrRef.beta - abxyCurrkp2.beta;
+
+        // Cost function
+        Cf = abxyerror.alpha * abxyerror.alpha + abxyerror.beta * abxyerror.beta;
+
+        if (ClaToCpuCostFunOpt.J_opt > Cf) {
+            ClaToCpuCostFunOpt.x_opt = k;
+            ClaToCpuCostFunOpt.J_opt = Cf;
+        }
+    }
+
+    CLA1_flag2 = 1; // Signal completion
+}
+
+// Task 8: Reserved
+#pragma CODE_SECTION(Cla1Prog)
+__interrupt void Cla1Task8(void)
+{
+    CLA1_flag3 = 1; // Placeholder
+}
