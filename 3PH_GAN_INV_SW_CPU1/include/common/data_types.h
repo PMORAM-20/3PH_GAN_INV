@@ -154,9 +154,9 @@ typedef struct {
  * @brief Stores parameters for a trapezoidal time waveform.
  */
 typedef struct {
-    Time tUp;            /**< Time for rising edge */
-    Time tDown;          /**< Time for falling edge */
-    Time tConst;         /**< Time for constant phase */
+    float tUp;            /**< Time for rising edge */
+    float tDown;          /**< Time for falling edge */
+    float tConst;         /**< Time for constant phase */
     float ReferenceValue; /**< Reference value for waveform */
 } TrapezoidalData;
 
@@ -190,7 +190,7 @@ extern ExperimentSettings g_experiment;
 /**
  * @brief Global main clock for timekeeping.
  */
-extern volatile Time g_main_clock;
+extern volatile float g_main_clock;
 
 #if SPEED_PROFILE == TRAPEZOIDAL
 /**

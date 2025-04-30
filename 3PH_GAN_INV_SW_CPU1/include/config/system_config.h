@@ -47,6 +47,11 @@
  */
 #define EPWM_DEADBAND_CYCLES (uint16_t)(200000000.0f / PWM_FREQUENCY_HZ * 0.0000001f)
 
+/**
+ * @brief PWM frequency for GaN semiconductors (CPU SYSCLK periods).
+ */
+#define PWM_FREQUENCY_CLK ((uint32_t)(100000000.0f / PWM_FREQUENCY_HZ))
+
 /*====================== ELECTRICAL MACHINE PARAMETERS ======================*/
 
 /**

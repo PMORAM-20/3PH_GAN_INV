@@ -42,6 +42,9 @@
 /** @brief Square root of 3 */
 #define MATH_SQRT_3 1.732050807568877f
 
+/** @brief Converts revolutions per seconds to radians per second */
+#define RPM_TO_RADS(rpm) (0.104719f * (rpm))
+
 /** @brief Converts degrees to radians */
 #define MATH_DEG_TO_RAD(deg) ((deg) * MATH_PI / 180.0f)
 

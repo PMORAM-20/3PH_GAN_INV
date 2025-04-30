@@ -87,7 +87,7 @@
     /**
      * @brief Target speed for trapezoidal profile (rad/s).
      */
-    #define TARGET_SPEED 50.0f
+    #define TARGET_SPEED_RPM 50.0f
 
     /**
      * @brief Speed ramp slope (rad/s^2).

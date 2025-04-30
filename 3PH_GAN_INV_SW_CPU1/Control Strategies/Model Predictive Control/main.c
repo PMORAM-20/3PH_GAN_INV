@@ -31,5 +31,9 @@
 
 int main(void)
 {
+    pwm_ctrl_period = PWM_FREQUENCY_CLK;
+
+    
+
 
 }
