@@ -10,6 +10,7 @@
  */
 
 #include "common/data_types.h"
+#include "common/math_utils.h"
 #include <string.h>
 
 /* Global Variable Definitions */
@@ -41,6 +42,10 @@ volatile float g_main_clock;
 /** @brief Total test duration, stored in fast RAM */
 #pragma DATA_SECTION(g_simultaion_time, ".ebss")
 volatile float g_simultaion_time;
+
+/** @brief Global sample period control, stored in fast RAM */
+#pragma DATA_SECTION(g_sample_period, ".ebss")
+volatile float g_sample_period;
 
 #if SPEED_PROFILE == TRAPEZOIDAL
 /** @brief Global trapezoidal speed profile, stored in fast RAM */
@@ -120,6 +125,9 @@ void data_types_init(void) {
     // Initialize PWM period
     g_pwm_period_ctrl = (uint32_t)(200000000.0f / CONTROL_FREQUENCY_HZ);
 
+    // Initialize sample control period
+    g_sample_period = 1/CONTROL_FREQUENCY_HZ;
+
     // Initialize ADC results
     g_adc_result.current_a = 0;
     g_adc_result.current_b = 0;
@@ -131,24 +139,28 @@ void data_types_init(void) {
     g_experiment.switching_frequency = PWM_FREQUENCY_HZ;
     g_experiment.load_torque = LOAD_TORQUE;
     g_experiment.control_frequency = CONTROL_FREQUENCY_HZ;
-    g_experiment.target_speed = TARGET_SPEED;
+    g_experiment.target_speed = TARGET_SPEED_RPM;
     g_experiment.data_length = DAT_LOG_BUFFER_LENGTH;
     g_experiment.num_variables = LOGGED_VARIABLES;
     g_experiment.decimation_factor = DECIMATION_FACTOR;
     g_experiment.start_time = 0.0f;
     g_experiment.end_angle = 0.0f;
-    strncpy(g_experiment.control_strategy, CONTROL_SCHEME, CONTROL_STR_MAX_LEN);
 
     // Initialize main clock
     g_main_clock = 0;
 
     // Initialize conditional variables
     #if SPEED_PROFILE == TRAPEZOIDAL
-    g_speed_profile.tUp = 0;
-    g_speed_profile.tDown = 0;
-    g_speed_profile.tConst = 0;
+    g_speed_profile.tUp = SPEED_SLOPE*RPM_TO_RADS(TARGET_SPEED_RPM);
+    g_speed_profile.tDown = SPEED_SLOPE*RPM_TO_RADS(TARGET_SPEED_RPM);
+    g_speed_profile.tConst = TIME_CONSTANT;
     g_speed_profile.ReferenceValue = RPM_TO_RADS(TARGET_SPEED_RPM);
+
+    g_simultaion_time = g_speed_profile.tConst + \
+                        g_speed_profile.tUp    + \
+                        g_speed_profile.tDown    ;
     #endif
+
 
     #if CONTROL_MODE == SPEED_CTRL
     g_speed_controller.kp = KP_SPEED;

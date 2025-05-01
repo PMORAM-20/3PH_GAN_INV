@@ -19,6 +19,7 @@ src/common/data_types.obj: C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.
 src/common/data_types.obj: C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/_defs.h
 src/common/data_types.obj: C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/machine/_limits.h
 src/common/data_types.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/common/control_defines.h
+src/common/data_types.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/common/math_utils.h
 src/common/data_types.obj: C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/string.h
 src/common/data_types.obj: C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/xlocale/_string.h
 
@@ -59,6 +60,8 @@ C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/_defs.h:
 C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/machine/_limits.h:
 
 C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/common/control_defines.h:
+
+C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/common/math_utils.h:
 
 C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/string.h:
 

@@ -20,7 +20,7 @@ Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/ti/ccs2010/ccs/tools
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/machine/_limits.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/common/control_defines.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/common/math_utils.h
-Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/CLA_driver.h
+Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/adc_driver.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/device/driverlib.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib/adc.h
@@ -96,11 +96,11 @@ Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/ti/c2000/C2000Ware_5
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib/inc/hw_upp.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib/version.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h
-Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/adc_driver.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/pwm_driver.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/peripheral_setup.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/CMPSS_driver.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/control/mpc_control.h
+Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/device/device.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/string.h
 Control\ Strategies/Model\ Predictive\ Control/main.obj: C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/xlocale/_string.h
 
@@ -144,7 +144,7 @@ C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/common/control_def
 
 C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/common/math_utils.h:
 
-C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/CLA_driver.h:
+C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/adc_driver.h:
 
 C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/device/driverlib.h:
 
@@ -296,8 +296,6 @@ C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib/version.h:
 
 C:/ti/c2000/C2000Ware_5_04_00_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h:
 
-C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/adc_driver.h:
-
 C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/pwm_driver.h:
 
 C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/peripheral_setup.h:
@@ -305,6 +303,8 @@ C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/periph
 C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/CMPSS_driver.h:
 
 C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/control/mpc_control.h:
+
+C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/device/device.h:
 
 C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/string.h:
 

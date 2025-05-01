@@ -30,5 +30,5 @@ void peripheral_setup_init(void) {
     PWM_init();
     ADC_init();
     CMPSS_init();
-    CLA_init();
+    // CLA_init();
 }

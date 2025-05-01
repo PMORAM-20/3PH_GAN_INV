@@ -95,6 +95,11 @@
     #define SPEED_SLOPE 0.05f
 
     /**
+     * @brief Stead-state time (seconds).
+     */
+    #define TIME_CONSTANT 4.0f
+
+    /**
      * @brief Load torque (Nm).
      */
     #define LOAD_TORQUE 1.0f

@@ -4,6 +4,7 @@
 "./src/common/data_types.obj"
 "./src/common/math_utils.obj"
 "./src/control/foc_control.obj"
+"./src/control/mpc_control.obj"
 "./src/peripherals/adc_driver.obj"
 "./src/peripherals/cla_driver.obj"
 "./src/peripherals/cmpss_driver.obj"

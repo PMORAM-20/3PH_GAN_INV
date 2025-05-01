@@ -92,13 +92,6 @@ src/peripherals/peripheral_setup.obj: C:/ti/c2000/C2000Ware_5_04_00_00/driverlib
 src/peripherals/peripheral_setup.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/config/system_config.h
 src/peripherals/peripheral_setup.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/ADC_driver.h
 src/peripherals/peripheral_setup.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/CMPSS_driver.h
-src/peripherals/peripheral_setup.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/CLA_driver.h
-src/peripherals/peripheral_setup.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/common/data_types.h
-src/peripherals/peripheral_setup.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/config/control_config.h
-src/peripherals/peripheral_setup.obj: C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/math.h
-src/peripherals/peripheral_setup.obj: C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/_defs.h
-src/peripherals/peripheral_setup.obj: C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/machine/_limits.h
-src/peripherals/peripheral_setup.obj: C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/common/control_defines.h
 
 ../src/peripherals/peripheral_setup.c:
 
@@ -283,18 +276,4 @@ C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/config/system_conf
 C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/ADC_driver.h:
 
 C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/CMPSS_driver.h:
-
-C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/peripherals/CLA_driver.h:
-
-C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/common/data_types.h:
-
-C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/config/control_config.h:
-
-C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/math.h:
-
-C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/_defs.h:
-
-C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/machine/_limits.h:
-
-C:/Users/pdobl/GITHUB/3PH_GAN_INV/3PH_GAN_INV_SW_CPU1/include/common/control_defines.h:
 

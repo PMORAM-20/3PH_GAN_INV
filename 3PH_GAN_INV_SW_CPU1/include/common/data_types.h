@@ -76,6 +76,14 @@ typedef struct {
 } ParkData;
 
 /**
+ * @brief Stores diagonal matrix (2x2) elements.
+ */
+typedef struct {
+    float c11; /**< Column 1, row 1 matrix (2x2) element*/
+    float c22; /**< Column 2, row 2 matrix (2x2) element*/
+} DiagonalMatrix;
+
+/**
  * @brief Stores rotor position and speed data.
  */
 typedef struct {
@@ -176,6 +184,11 @@ extern volatile RotorData g_rotor;
  * @brief Global PWM period control value.
  */
 extern volatile uint32_t g_pwm_period_ctrl;
+
+/**
+ * @brief Global sample period control value in seconds.
+ */
+extern volatile float g_sample_period;
 
 /**
  * @brief Global ADC results for phase currents.

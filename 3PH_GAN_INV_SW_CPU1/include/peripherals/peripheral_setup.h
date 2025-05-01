@@ -28,7 +28,7 @@
 #include "peripherals/PWM_driver.h"
 #include "peripherals/ADC_driver.h"
 #include "peripherals/CMPSS_driver.h"
-#include "peripherals/CLA_driver.h"
+// #include "peripherals/CLA_driver.h"
 
 /**
  * @brief Initializes all peripherals for the three-phase inverter system.

@@ -21,19 +21,53 @@
 
 #include "common/data_types.h"
 #include "common/math_utils.h"
-#include "peripherals/CLA_driver.h"
+// #include "peripherals/CLA_driver.h"
 #include "peripherals/adc_driver.h"
 #include "peripherals/pwm_driver.h"
 #include "peripherals/peripheral_setup.h"
 #include "control/mpc_control.h"
 #include "driverlib.h"
+#include "device.h"
 #include <string.h>
 
 int main(void)
 {
-    pwm_ctrl_period = PWM_FREQUENCY_CLK;
+   
+    Device_init();
 
-    
+    Device_initGPIO();
 
+    DINT;
+
+    Interrupt_initModule();
+
+    IER = 0x0000;
+    IFR = 0x0000;
+
+    Interrupt_initVectorTable();
+
+    SysCtl_disablePeripheral(SYSCTL_PERIPH_CLK_TBCLKSYNC);
+
+    EALLOW;
+
+    //ConfigureGPIO(); /* Falta por hacer esta función en alguna parte*/
+    peripheral_setup_init();
+
+    // Definir las interrupciones en cada módulo
+    // Interrupt_register(INT_ADCA1, &handleAdcA1Interrupt);
+    // Interrupt_register(INT_ADCB1, &handleAdcB1Interrupt);
+    // Interrupt_register(INT_EPWM1, &handleSynchronousInterrupt);
+
+    Interrupt_enable(INT_ADCA1);
+    Interrupt_enable(INT_ADCB1);
+    Interrupt_enable(INT_EPWM1);
+
+    SysCtl_setSyncOutputConfig(SYSCTL_SYNC_OUT_SRC_EPWM1SYNCOUT);
+    EDIS;
+
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_TBCLKSYNC);
+
+    EINT;
+    ERTM;
 
 }
